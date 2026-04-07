@@ -34,4 +34,5 @@ fun main() {
     var car2: Car2 = Car2("Audi", "A4", 2019)
     car2.rent()
     // Constructor => Yapıcı fonksiyon
+    //gsdgs
 }
