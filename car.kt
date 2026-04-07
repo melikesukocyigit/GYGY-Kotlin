@@ -1,35 +1,37 @@
-class Car {
-    //içi boş bir yeni tür oluşturduk
-    // özellik ekleyebilirsiniz
-    var brand: String = " " ;
-    var model: String = " " ;
-    var year: Int = 0;
+package com.example.kotlin.models
+// Her dosya bir paketin altında tanımlanır.
 
-    fun rent() {
-        println("$brand $model araba kiralandi.") //classın fonksiyonu = classıb alanalrıba erişebilriz
+// eğer belirtilmediyse public
+// bu şekilde tanımlama => class içi değişkene otomatik atanır
+class Car(var brand: String, var model: String, var year: Int) {
+
+    init {
+        // Constructor çalıştığında çalışan blok.
+        println("Car sınıfından bir nesne oluşturuldu.") 
     }
 
+    fun rent() {
+        println("$brand $model araba kiralandi.") // Classın fonksiyonu => classın alanlarına erişebiliriz.
+    }
 }
 
+class Car2 {
+    // Class içi değişken manual yönetilmelidir
+    constructor(brand: String, model: String, year: Int) {
+        println("Car2 sınıfından bir nesne oluşturuldu.") 
+    }
+
+    fun rent() {
+        println("$brand Car2 araba kiralandi.") 
+    }
+}
+// Bir kalıp
+
 fun main() {
-    // o kalıptan türeyen örnekler
-    var car1: Car = Car() // claslardan üretilen her bir örneğe instance denri.car1 instancedir
-    car1.brand = "BMW"
-    car1.model = "M3"
-    car1.year = 2020
-    println(car1)
+    var car1: Car = Car("BMW", "M3", 2020) // sanki bi fonk. çağırıyor gibi.
+    car1.rent()
 
-     // o kalıptan türeyen örnekler
-    var car2: Car = Car() // claslardan üretilen her bir örneğe instance denri.car1 instancedir
-    car2.brand = "mercedes"
-    car2.model = "c200"
-    car2.year = 2021
-    println(car2)
-
-    // veritabanı işlemleri calss
-    // iş kodları , validasyon yapan class 
-    // bir nesneyi temsil eden class
-    var name: String = "Melike"
-    println("Merhaba  $name")
-    //
+    var car2: Car2 = Car2("Audi", "A4", 2019)
+    car2.rent()
+    // Constructor => Yapıcı fonksiyon
 }
