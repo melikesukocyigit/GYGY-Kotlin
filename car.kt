@@ -5,6 +5,10 @@ class Car {
     var model: String = " " ;
     var year: Int = 0;
 
+    fun rent() {
+        println("$brand $model araba kiralandi.") //classın fonksiyonu = classıb alanalrıba erişebilriz
+    }
+
 }
 
 fun main() {
@@ -27,4 +31,5 @@ fun main() {
     // bir nesneyi temsil eden class
     var name: String = "Melike"
     println("Merhaba  $name")
+    //
 }
