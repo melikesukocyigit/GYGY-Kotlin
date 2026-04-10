@@ -55,3 +55,13 @@ fun main() {
     car2.rent()
     // Constructor => Yapıcı fonksiyon
 }
+
+
+// 1 haftamız var => Haftaya salı ders saati
+
+// OOP Konseptleri => Encapsulation, Inheritance, Polymorphism, Abstraction
+
+// bir .md dosyasında birine anlatır gibi anlatmak.
+
+// referanslarla .kt dosyaları ve satırları 
+// örneklerle güçlendirilmeli.
